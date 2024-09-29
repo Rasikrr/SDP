@@ -14,6 +14,7 @@ public class Main {
         cfg.setWorkHours("10 AM - 11 PM");
 
         MovieFactory movie3dFactory = new Movie3DFactory();
+
         Movie joker2 = movie3dFactory.createMovie("Joker 2");
         joker2.play();
 
@@ -29,7 +30,7 @@ public class Main {
         ticketBookingBuilder.setMovieName("Joker 2");
         ticketBookingBuilder.setSeatNumber("2");
         ticketBookingBuilder.setSnackCombo("Chips, Coca-cola");
-        Ticket ticket = ticketBookingBuilder.getResult();
+        Ticket ticket = ticketBookingBuilder.build();
 
         System.out.println(ticket.getMovieName());
         System.out.println(ticket.getSeatNumber());
