@@ -11,6 +11,8 @@ import assignment_2.Decorator.*;
 import assignment_2.Facade.*;
 import assignment_2.Flyweight.CharacterFactory;
 import assignment_2.Flyweight.TextEditor;
+import assignment_2.Proxy.ProxyVideoLecture;
+import assignment_2.Proxy.VideoLecture;
 
 public class Main{
     public static void main(String[] args) {
@@ -90,5 +92,14 @@ public class Main{
         editor.insert('o', "Arial", 12, 4, 0);
 
         editor.render();
+
+        // Proxy
+        VideoLecture video1 = new ProxyVideoLecture("JavaDesignPatterns.mp4");
+
+        video1.getInfo();
+        video1.play();
+
+        VideoLecture video2 = new ProxyVideoLecture("IntroductionToAlgorithms.mp4");
+        video2.play();
     }
 }
